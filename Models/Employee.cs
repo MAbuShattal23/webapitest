@@ -20,8 +20,5 @@ public class Employee{
         this.Address = address;
         this.Sex = sex;
         this.Salary = salary;
-
-
-
      }
 }

@@ -23,7 +23,6 @@ public class EmployeeController : ControllerBase
             return NotFound();
         }
         return Ok(allEmployees);
-        //return Ok(_db.Find<Employee>(1));       
     }
 
     [HttpGet("{id:int}")]
@@ -43,6 +42,19 @@ public class EmployeeController : ControllerBase
         return Created($"/employee/{e.Id}", e);
     }
 
+    [HttpPut]
+    public IActionResult UpdateEmployee(int id, [FromBody] Employee e){
+        if(id != e.Id){
+            return BadRequest();
+        }
+        if(_db.Find<Employee>(id) == null){
+            return NotFound();            
+        }
+        _db.Entry(e).State = EntityState.Modified;
+        _db.SaveChanges();
+        return NoContent();
+    }
+
 
     [HttpDelete("{id:int}")]
     public IActionResult DeleteEmployee(int id){
@@ -55,7 +67,7 @@ public class EmployeeController : ControllerBase
         return Ok();     
     }
 
-    
+
 
 
 

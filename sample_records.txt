@@ -13,3 +13,15 @@ INSERT INTO Employees VALUES     (2, 'Franklin','T','Wong',333445555,'1965-12-08
   "Sex": "F",
   "Salary":25000
 }
+
+{
+  "Id": 3,
+  "Fname": "Alicia",
+  "Minit": "J",
+  "Lname":"Zelaya",
+  "Ssn":999887777,
+  "Bdate": "1968-01-19",
+  "Address": "4444 Castle, Spring TX",
+  "Sex": "F",
+  "Salary":30000
+}
