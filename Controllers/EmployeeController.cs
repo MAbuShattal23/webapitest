@@ -44,6 +44,20 @@ public class EmployeeController : ControllerBase
     }
 
 
+    [HttpDelete("{id:int}")]
+    public IActionResult DeleteEmployee(int id){
+        var e = _db.Find<Employee>(id);
+        if(e == null){
+            return NotFound();
+        }
+        _db.Remove(e);
+        _db.SaveChanges();
+        return Ok();     
+    }
+
+    
+
+
 
 
 
