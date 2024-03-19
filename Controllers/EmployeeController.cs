@@ -7,7 +7,6 @@ namespace webapicontrollers.Controllers;
 [Route("[controller]")]
 public class EmployeeController : ControllerBase
 {
-    public int idcounter = 0;
 
     private readonly AppDbContext _db;
 
@@ -19,13 +18,22 @@ public class EmployeeController : ControllerBase
     [HttpGet(Name = "employee")]
     public IActionResult GetEmployees()
     {
-        return Ok(_db.Find<Employee>());       
+        var allEmployees = _db.Employees.ToList<Employee>();
+        if(allEmployees == null){
+            return NotFound();
+        }
+        return Ok(allEmployees);
+        //return Ok(_db.Find<Employee>(1));       
     }
 
     [HttpGet("{id:int}")]
     public IActionResult GetEmployee(int id)
     {
-        return Ok(_db.Find<Employee>(id));       
+        var e = _db.Find<Employee>(id);
+        if(e == null){
+            return NotFound();
+        }
+        return Ok(e);       
     }
 
     [HttpPost]
@@ -34,6 +42,11 @@ public class EmployeeController : ControllerBase
         _db.SaveChanges();
         return Created($"/employee/{e.Id}", e);
     }
+
+
+
+
+
 
 
 

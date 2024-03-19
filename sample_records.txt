@@ -1,0 +1,15 @@
+INSERT INTO Employees VALUES     (1, 'John','B','Smith',123456789,'1965-01-09','731 Fondren, Houston TX','M',30000);
+INSERT INTO Employees VALUES     (2, 'Franklin','T','Wong',333445555,'1965-12-08','638 Voss, Houston TX','M',40000);
+
+
+{
+  "Id": 3,
+  "Fname": "Alicia",
+  "Minit": "J",
+  "Lname":"Zelaya",
+  "Ssn":999887777,
+  "Bdate": "1968-01-19",
+  "Address": "3321 Castle, Spring TX",
+  "Sex": "F",
+  "Salary":25000
+}
