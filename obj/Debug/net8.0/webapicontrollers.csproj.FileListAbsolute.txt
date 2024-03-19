@@ -252,3 +252,4 @@ C:\Users\engma\OneDrive\Desktop\webapitest\obj\Debug\net8.0\refint\webapicontrol
 C:\Users\engma\OneDrive\Desktop\webapitest\obj\Debug\net8.0\webapicontrollers.pdb
 C:\Users\engma\OneDrive\Desktop\webapitest\obj\Debug\net8.0\webapicontrollers.genruntimeconfig.cache
 C:\Users\engma\OneDrive\Desktop\webapitest\obj\Debug\net8.0\ref\webapicontrollers.dll
+C:\Users\engma\OneDrive\Desktop\webapitest\obj\Debug\net8.0\webapicontrollers.sourcelink.json
